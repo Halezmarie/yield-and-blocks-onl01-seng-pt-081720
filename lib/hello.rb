@@ -1,16 +1,18 @@
 def hello_t(array)
-   if block_given? #check if there is a block in calling method
+   if block_given? 
       i = 0
    while i < array.length
       yield array[i]
-      i += 1 #looping through each index
+      i += 1 
+      #looping
    end
-   array #return the final array
+   array
+   #return
    else
       puts "Hey! No block was given!"
    end
 end
-hello_t(["Tim", "Tom", "Jim"]) do |name| #parameter for array[i] from yield
+hello_t(["Tim", "Tom", "Jim"]) do |name| 
    if name.start_with?("T")
       puts "Hi, #{name}"
    end
