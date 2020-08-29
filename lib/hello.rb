@@ -10,8 +10,6 @@ def hello_t(array)
       puts "Hey! No block was given!"
    end
 end
-
-#call the method
 hello_t(["Tim", "Tom", "Jim"]) do |name| #parameter for array[i] from yield
    if name.start_with?("T")
       puts "Hi, #{name}"
